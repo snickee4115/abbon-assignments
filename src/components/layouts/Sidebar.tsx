@@ -7,6 +7,7 @@ import { menus } from "@/constant/menus";
 import MenuItem from "./MenuItem";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { openCurrentLocation } from "@/lib/utils";
 import Setting from "./Setting";
 
 type Props = {
@@ -19,6 +20,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: Props) => {
   const [expanded, setExpanded] = useState<string>();
 
   const handleMenuClick = (menu: (typeof menus)[number]) => {
+    if (menu.externalLink === "/current-location") {
+      openCurrentLocation();
+      return;
+    }
     setSidebarOpen(false);
   };
 

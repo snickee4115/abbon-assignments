@@ -6,6 +6,7 @@ import MenuItem from "./MenuItem";
 import { ChevronDown, ChevronUp, HomeIcon } from "lucide-react";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
+import { openCurrentLocation } from "@/lib/utils";
 import Setting from "./Setting";
 
 const Navbar = () => {
@@ -41,9 +42,7 @@ const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <Setting />
-        </div>
+        <Setting />
       </nav>
     </header>
   );
@@ -56,7 +55,12 @@ const NavItem = ({ menu }: { menu: (typeof menus)[number] }) => {
     setActiveMenu(menuTitle);
   };
 
-  const handleMenuClick = () => {};
+  const handleMenuClick = () => {
+    if (menu.externalLink === "/current-location") {
+      openCurrentLocation();
+      return;
+    }
+  };
   return (
     <div
       key={menu.title}
