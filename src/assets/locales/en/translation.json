@@ -10,6 +10,9 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "age": "Age",
+    "search": "Search contacts...",
+    "clear": "Clear",
+    "delete": "Delete",
     "create": "Create Contact",
     "validation": {
       "firstName": {

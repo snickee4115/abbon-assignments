@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Navbar from "./components/layouts/Navbar";
 import Home from "./pages/Home";
 import ContactForm from "./pages/ContactForm";
+import ContactList from "./pages/ContactList";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact/form" element={<ContactForm />} />
+            <Route path="/contact/list" element={<ContactList />} />
           </Routes>
         </main>
       </BrowserRouter>

@@ -10,6 +10,9 @@
     "firstName": "ชื่อ",
     "lastName": "นามสกุล",
     "age": "อายุ",
+    "search": "ค้นหารายชื่อ...",
+    "clear": "ล้าง",
+    "delete": "ลบ",
     "create": "สร้างรายชื่อ",
     "validation": {
       "firstName": {
