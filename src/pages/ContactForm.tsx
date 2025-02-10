@@ -13,6 +13,8 @@ import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 import { contactSchema } from "@/lib/validation";
 import { Button } from "@/components/ui/button";
+import Modal from "@/components/ui/Modal";
+import { useState } from "react";
 
 type ContactFormData = {
   firstName: string;
@@ -21,6 +23,9 @@ type ContactFormData = {
 };
 
 const ContactForm = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [alertMsg, setAlertMsg] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
   const { t } = useTranslation();
   const navigate = useNavigate();
   const addContact = useContactStore((state) => state.addContact);
@@ -37,10 +42,20 @@ const ContactForm = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       addContact(data);
-      alert(t("contact.success"));
-      navigate("/contact/list");
+      setAlertMsg(t("contact.success"));
+      setIsSuccess(true);
     } catch (error) {
-      alert(t("contact.error"));
+      setAlertMsg(t("contact.error"));
+      setIsSuccess(false);
+    }
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    if (isSuccess) {
+      navigate("/contact/list");
+    } else {
+      setIsOpen(false);
     }
   };
 
@@ -100,6 +115,16 @@ const ContactForm = () => {
           </Button>
         </form>
       </Form>
+      <Modal
+        isOpen={isOpen}
+        onClose={handleCloseModal}
+        className="max-w-[685px] flex flex-col gap-4 justify-center items-center"
+      >
+        {alertMsg && <div className="text-3xl">{alertMsg}</div>}
+        <Button type="submit" className="w-full md:w-fit text-4xl p-8" onClick={handleCloseModal}>
+          ตกลง
+        </Button>
+      </Modal>
     </div>
   );
 };
