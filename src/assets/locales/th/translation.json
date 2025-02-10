@@ -1,0 +1,9 @@
+{
+  "navigation": {
+    "home": "หน้าแรก",
+    "contact": "ติดต่อ",
+    "contactList": "รายชื่อติดต่อ",
+    "createContact": "สร้างรายชื่อติดต่อ",
+    "currentLocation": "ตำแหน่งปัจจุบัน"
+  }
+}

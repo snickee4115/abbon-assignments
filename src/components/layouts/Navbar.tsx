@@ -3,6 +3,8 @@ import { menus } from "@/constant/menus";
 import MenuItem from "./MenuItem";
 import { ChevronDown, ChevronUp, HomeIcon } from "lucide-react";
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
+import Setting from "./Setting";
 
 const Navbar = () => {
   return (
@@ -19,9 +21,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <div>avatar</div>
-          <div>name</div>
-          <div>TH/EN</div>
+          <Setting />
         </div>
       </nav>
     </header>
@@ -29,6 +29,7 @@ const Navbar = () => {
 };
 
 const NavItem = ({ menu }: { menu: (typeof menus)[number] }) => {
+  const { t } = useTranslation();
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const handleMenuHover = (menuTitle: string | null) => {
     setActiveMenu(menuTitle);
@@ -45,7 +46,7 @@ const NavItem = ({ menu }: { menu: (typeof menus)[number] }) => {
       <div className="flex gap-1">
         <MenuItem
           key={menu.title}
-          title={menu.title}
+          title={t(menu.title)}
           to={menu.href || "#"}
           onClick={handleMenuClick}
           className={menu.subMenus?.length ? "cursor-default pr-6" : ""}
@@ -65,7 +66,7 @@ const NavItem = ({ menu }: { menu: (typeof menus)[number] }) => {
                     ${activeMenu === menu.title ? "flex" : "hidden"}`}
         >
           {menu.subMenus.map((subMenu) => (
-            <MenuItem key={subMenu.title} title={subMenu.title} to={subMenu.href} />
+            <MenuItem key={subMenu.title} title={t(subMenu.title)} to={subMenu.href} />
           ))}
         </div>
       ) : null}

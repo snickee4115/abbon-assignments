@@ -1,23 +1,23 @@
 export const menus = [
   {
-    title: "หน้าแรก",
+    title: "navigation.home",
     href: "/",
   },
   {
-    title: "ติดต่อ",
+    title: "navigation.contact",
     subMenus: [
       {
-        title: "รายชื่อติดต่อ",
+        title: "navigation.contactList",
         href: "/contact/list",
       },
       {
-        title: "สร้างรายชื่อติดต่อ",
+        title: "navigation.createContact",
         href: "/contact/form",
       },
     ],
   },
   {
-    title: "ตำแหน่งปัจจุบัน",
+    title: "navigation.currentLocation",
     externalLink: "/current-location",
   },
 ];

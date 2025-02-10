@@ -1,3 +1,4 @@
+import "./i18n";
 import { BrowserRouter, Route, Routes } from "react-router";
 import Navbar from "./components/layouts/Navbar";
 
