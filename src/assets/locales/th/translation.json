@@ -29,5 +29,14 @@
     },
     "success": "สร้างรายชื่อสำเร็จ",
     "error": "เกิดข้อผิดพลาดในการสร้างรายชื่อ"
+  },
+  "footer": {
+    "address": "123 ถนนทดสอบ กรุงเทพฯ 10400",
+    "phone": "โทรหาเรา +66123456789",
+    "email": "ส่งอีเมลถึงเรา contact@example.com",
+    "line": "ติดต่อไลน์ @exampleline",
+    "phoneNumber": "+66123456789",
+    "emailAddress": "contact@example.com",
+    "lineId": "@exampleline"
   }
 }

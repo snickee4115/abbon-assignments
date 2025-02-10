@@ -4,6 +4,7 @@ import Navbar from "./components/layouts/Navbar";
 import Home from "./pages/Home";
 import ContactForm from "./pages/ContactForm";
 import ContactList from "./pages/ContactList";
+import Footer from "./components/layouts/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/contact/list" element={<ContactList />} />
           </Routes>
         </main>
+        <Footer />
       </BrowserRouter>
     </div>
   );

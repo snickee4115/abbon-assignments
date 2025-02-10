@@ -29,5 +29,14 @@
     },
     "success": "Contact created success",
     "error": "Error creating contact"
+  },
+  "footer": {
+    "address": "123 address, Bangkok 10400, Thailand",
+    "phone": "Call us +66123456789",
+    "email": "Email us contact@example.com",
+    "line": "Line @exampleline",
+    "phoneNumber": "+66123456789",
+    "emailAddress": "contact@example.com",
+    "lineId": "@exampleline"
   }
 }
