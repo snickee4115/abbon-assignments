@@ -5,5 +5,26 @@
     "contactList": "Contact List",
     "createContact": "Create Contact",
     "currentLocation": "Current Location"
+  },
+  "contact": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "age": "Age",
+    "create": "Create Contact",
+    "validation": {
+      "firstName": {
+        "min": "First name must be at least {{min}} characters"
+      },
+      "lastName": {
+        "min": "Last name must be at least {{min}} characters"
+      },
+      "age": {
+        "min": "Age must be positive",
+        "max": "Age must not exceed {{max}}",
+        "required": "Age is required"
+      }
+    },
+    "success": "Contact created success",
+    "error": "Error creating contact"
   }
 }
