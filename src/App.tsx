@@ -1,9 +1,15 @@
-import { Button } from "./components/ui/button";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 function App() {
   return (
-    <div className="bb">
-      <Button>test</Button>
+    <div className="min-h-screen flex flex-col">
+      <BrowserRouter>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<div>home</div>} />
+          </Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
