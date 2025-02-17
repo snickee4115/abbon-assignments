@@ -8,7 +8,7 @@
 
 3. **Profile Customization** Users can update their profile image and full name.
 
-4. **Contact Form & List** Allows users to view, add, delete, and search contacts. 
+4. **Contact Form & List** Allows users to view, add, delete, and search contacts.
 
 ## Installation
 
@@ -28,13 +28,13 @@
    ```bash
    npm run dev
    ```
-5. **Start the production server:**
+5. **OR Start the production server:**
    ```bash
    npm run build
    npm start
    ```
 6. **Access the application:**
-   - Open your browser and go to [http://localhost:3000](http://localhost:3000).
+   - Open your browser and go to [http://localhost:5173](http://localhost:5173).
 
 ## Technologies Used
 
